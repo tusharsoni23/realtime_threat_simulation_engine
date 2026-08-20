@@ -1,6 +1,5 @@
 # Real-Time Threat Simulation Engine
 
-## Day 17 – Jagspire Cyber Security Internship
 
 ### Objective
 Simulate real-time security log ingestion. Each event is processed immediately, classified, and assigned a dynamic risk score.
