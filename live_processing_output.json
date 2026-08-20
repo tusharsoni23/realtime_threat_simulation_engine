@@ -1,0 +1,164 @@
+[
+    {
+        "processed_at": "2026-08-20 19:51:48",
+        "event_number": 1,
+        "event": {
+            "timestamp": "2026-08-20T10:01:00",
+            "user": "alice",
+            "ip": "192.168.1.10",
+            "event_type": "login_success",
+            "message": "Normal office login"
+        },
+        "risk_score": 0,
+        "severity": "LOW",
+        "reasons": [
+            "No suspicious behavior detected"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:48",
+        "event_number": 2,
+        "event": {
+            "timestamp": "2026-08-20T10:02:00",
+            "user": "bob",
+            "ip": "192.168.1.20",
+            "event_type": "file_access",
+            "message": "Accessed company document"
+        },
+        "risk_score": 0,
+        "severity": "LOW",
+        "reasons": [
+            "No suspicious behavior detected"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:48",
+        "event_number": 3,
+        "event": {
+            "timestamp": "2026-08-20T10:03:00",
+            "user": "alice",
+            "ip": "203.0.113.50",
+            "event_type": "login_failed",
+            "message": "Failed login attempt"
+        },
+        "risk_score": 2,
+        "severity": "LOW",
+        "reasons": [
+            "Failed login"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:49",
+        "event_number": 4,
+        "event": {
+            "timestamp": "2026-08-20T10:03:10",
+            "user": "alice",
+            "ip": "203.0.113.50",
+            "event_type": "login_failed",
+            "message": "Repeated failed login attempt"
+        },
+        "risk_score": 2,
+        "severity": "LOW",
+        "reasons": [
+            "Failed login"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:49",
+        "event_number": 5,
+        "event": {
+            "timestamp": "2026-08-20T10:03:20",
+            "user": "alice",
+            "ip": "203.0.113.50",
+            "event_type": "login_failed",
+            "message": "Repeated failed login attempt"
+        },
+        "risk_score": 5,
+        "severity": "HIGH",
+        "reasons": [
+            "Failed login",
+            "Repeated failed logins"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:49",
+        "event_number": 6,
+        "event": {
+            "timestamp": "2026-08-20T10:04:00",
+            "user": "bob",
+            "ip": "198.51.100.25",
+            "event_type": "port_scan",
+            "message": "Multiple ports probed"
+        },
+        "risk_score": 4,
+        "severity": "MEDIUM",
+        "reasons": [
+            "No suspicious behavior detected"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:49",
+        "event_number": 7,
+        "event": {
+            "timestamp": "2026-08-20T10:05:00",
+            "user": "alice",
+            "ip": "203.0.113.50",
+            "event_type": "login_success",
+            "message": "Login succeeded after repeated failures"
+        },
+        "risk_score": 3,
+        "severity": "MEDIUM",
+        "reasons": [
+            "Successful login after repeated failures"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:49",
+        "event_number": 8,
+        "event": {
+            "timestamp": "2026-08-20T10:06:00",
+            "user": "charlie",
+            "ip": "192.168.1.30",
+            "event_type": "api_request",
+            "message": "Normal API request"
+        },
+        "risk_score": 0,
+        "severity": "LOW",
+        "reasons": [
+            "No suspicious behavior detected"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:50",
+        "event_number": 9,
+        "event": {
+            "timestamp": "2026-08-20T10:07:00",
+            "user": "charlie",
+            "ip": "198.51.100.25",
+            "event_type": "malicious_request",
+            "message": "Suspicious request pattern"
+        },
+        "risk_score": 5,
+        "severity": "HIGH",
+        "reasons": [
+            "No suspicious behavior detected"
+        ]
+    },
+    {
+        "processed_at": "2026-08-20 19:51:50",
+        "event_number": 10,
+        "event": {
+            "timestamp": "2026-08-20T10:08:00",
+            "user": "alice",
+            "ip": "203.0.113.50",
+            "event_type": "data_download",
+            "message": "Large data download after suspicious login"
+        },
+        "risk_score": 5,
+        "severity": "HIGH",
+        "reasons": [
+            "Repeated activity from same IP",
+            "Data access after suspicious login activity"
+        ]
+    }
+]

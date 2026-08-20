@@ -1,0 +1,30 @@
+=================================================================
+REAL-TIME THREAT SIMULATION ENGINE
+Streaming events one at a time...
+=================================================================
+[LIVE] Event #1 | 2026-08-20T10:01:00 | alice | login_success | Risk=0 | LOW
+[LIVE] Event #2 | 2026-08-20T10:02:00 | bob | file_access | Risk=0 | LOW
+[LIVE] Event #3 | 2026-08-20T10:03:00 | alice | login_failed | Risk=2 | LOW
+       Alert: Failed login
+[LIVE] Event #4 | 2026-08-20T10:03:10 | alice | login_failed | Risk=2 | LOW
+       Alert: Failed login
+[LIVE] Event #5 | 2026-08-20T10:03:20 | alice | login_failed | Risk=5 | HIGH
+       Alert: Failed login, Repeated failed logins
+[LIVE] Event #6 | 2026-08-20T10:04:00 | bob | port_scan | Risk=4 | MEDIUM
+[LIVE] Event #7 | 2026-08-20T10:05:00 | alice | login_success | Risk=3 | MEDIUM
+       Alert: Successful login after repeated failures
+[LIVE] Event #8 | 2026-08-20T10:06:00 | charlie | api_request | Risk=0 | LOW
+[LIVE] Event #9 | 2026-08-20T10:07:00 | charlie | malicious_request | Risk=5 | HIGH
+[LIVE] Event #10 | 2026-08-20T10:08:00 | alice | data_download | Risk=5 | HIGH
+       Alert: Repeated activity from same IP, Data access after suspicious login activity
+=================================================================
+Processing complete. Events processed: 10
+Output saved to: live_processing_output.json
+=================================================================
+\nERRORS:\nSpreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.

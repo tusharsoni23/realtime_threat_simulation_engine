@@ -1,0 +1,72 @@
+[
+    {
+        "timestamp": "2026-08-20T10:01:00",
+        "user": "alice",
+        "ip": "192.168.1.10",
+        "event_type": "login_success",
+        "message": "Normal office login"
+    },
+    {
+        "timestamp": "2026-08-20T10:02:00",
+        "user": "bob",
+        "ip": "192.168.1.20",
+        "event_type": "file_access",
+        "message": "Accessed company document"
+    },
+    {
+        "timestamp": "2026-08-20T10:03:00",
+        "user": "alice",
+        "ip": "203.0.113.50",
+        "event_type": "login_failed",
+        "message": "Failed login attempt"
+    },
+    {
+        "timestamp": "2026-08-20T10:03:10",
+        "user": "alice",
+        "ip": "203.0.113.50",
+        "event_type": "login_failed",
+        "message": "Repeated failed login attempt"
+    },
+    {
+        "timestamp": "2026-08-20T10:03:20",
+        "user": "alice",
+        "ip": "203.0.113.50",
+        "event_type": "login_failed",
+        "message": "Repeated failed login attempt"
+    },
+    {
+        "timestamp": "2026-08-20T10:04:00",
+        "user": "bob",
+        "ip": "198.51.100.25",
+        "event_type": "port_scan",
+        "message": "Multiple ports probed"
+    },
+    {
+        "timestamp": "2026-08-20T10:05:00",
+        "user": "alice",
+        "ip": "203.0.113.50",
+        "event_type": "login_success",
+        "message": "Login succeeded after repeated failures"
+    },
+    {
+        "timestamp": "2026-08-20T10:06:00",
+        "user": "charlie",
+        "ip": "192.168.1.30",
+        "event_type": "api_request",
+        "message": "Normal API request"
+    },
+    {
+        "timestamp": "2026-08-20T10:07:00",
+        "user": "charlie",
+        "ip": "198.51.100.25",
+        "event_type": "malicious_request",
+        "message": "Suspicious request pattern"
+    },
+    {
+        "timestamp": "2026-08-20T10:08:00",
+        "user": "alice",
+        "ip": "203.0.113.50",
+        "event_type": "data_download",
+        "message": "Large data download after suspicious login"
+    }
+]
